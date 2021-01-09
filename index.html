@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Registration Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <linK rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+          <h2>Create account</h2>
+      </div>
+      <form class="form" id="form">
+        <div class="form-control ">
+          <label>Fisrt Name</label>
+          <input type="text" placeholder="Frist Name"  id="Firstname">
+          <i class="fa-check-circle"></i> 
+          <i class="fa-exclamation-circle"></i>
+          <small>Error massage </small>
+        </div>
+        <div class="form-control">
+          <label>Last Name</label>
+          <input type="text"placeholder="Last Name"  id="Lastname">
+          <i class="fa-check-circle"></i> 
+          <i class="fa-exclamation-circle"></i>
+          <small>Error massage </small>
+        </div>
+        <div class="form-control">
+          <label>Unsername</label>
+          <input type="text"placeholder="@XYZ"  id="userName">
+          <i class="fa-check-circle"></i> 
+          <i class="fa-exclamation-circle"></i>
+          <small>Error massage </small>
+        </div>
+        <div class="form-control">
+          <label>Email</label>
+          <input type="email" placeholder="ex:fdfe@gmail.com" id="Email">
+          <i class="fa-check-circle"></i> 
+          <i class="fa-exclamation-circle"></i>
+          <small>Error massage </small>
+        </div>
+        <div class="form-control">
+          <label>Birth Date :</label>
+          <input type="date"name="birthday" />
+        </div>
+         
+        <div class="pw_form">
+        
+
+          <div class="form-control pw">
+            <label> Password </label>
+            <input type="password" placeholder="Must be at lest 12 degit" id="password" >
+            <i class="fa-check-circle"></i> 
+            <i class="fa-exclamation-circle"></i>
+            <small class="float-right">Error massage </small>
+          </div>
+
+          <div class="form-control   pw">
+            <label>Confirme Password </label>
+            <input type="password" placeholder="Must be at lest 12 degit" id="password2" >
+            <i class="fa-check-circle"></i> 
+            <i class="fa-exclamation-circle"></i>
+            <small class="float-right">Error massage </small>
+          </div>
+          
+          <div class="form-control pw">
+            <label> Can't think of a strong password ?   </label>
+            <a href="html/pw_genr.html" id="pwMaker" >genrat one</a>
+          </div>
+        </div>
+        
+        
+          
+        <button>Submit</button>
+      </form>
+    </div>
+  </body>
+
+  <script src="js/scripts.js"></script>
+  <script>
+  const form = document.getElementById('form');
+  const firstname = document.getElementById('Firstname');
+  const Lastname = document.getElementById('Lastname');
+  const userName = document.getElementById('userName');
+  const Email = document.getElementById('Email');
+  const pw_gen_on = document.getElementById('pw_gen')
+  const password = document.getElementById('password')
+  const password2 = document.getElementById('password2')
+
+
+  form.addEventListener('submit',(e) => {
+    e.preventDefault();
+    checkInputs();
+    
+  });
+
+
+  function checkInputs() {
+  checkIfEmpty(firstname,1)
+  checkIfEmpty(Lastname,1)
+  checkIfEmpty(userName,2)
+  checkIfEmpty(Email)
+  checkIfEmpty(password)
+  checkIfEmpty(password2)
+
+
+  }
+
+  </script>
+
+</html>
+

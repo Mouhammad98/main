@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Password Genrator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <linK rel="stylesheet" href="../css/style.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+          <h2>Login</h2>
+      </div>
+      <form class="form" id="form">
+        
+      <div class="form-control">
+        <label>Username </label>
+        <input type="username"  placeholder="username " name="username" id="username">
+        <i class="fa-check-circle"></i> 
+        <i class="fa-exclamation-circle"></i>
+        <small>Error massage </small>
+      </div>
+      <div class="form-control">
+        <label>Password</label>
+        <input type="password" placeholder="password" name="password" id="password">
+        <i class="fa-check-circle"></i> 
+        <i class="fa-exclamation-circle"></i>
+        <small>Error massage </small>
+      </div>
+        
+          
+        <button name="login" type="submit" >login</button>
+      </form>
+    </div>
+  </body>
+
+ 
+  <script src="../js/scripts.js"></script>
+  <script>
+  const form = document.getElementById('form');
+  const Favoritenumber = document.getElementById('username');
+  const Favoritephrase = document.getElementById('password');
+
+
+  function checkInputs() {
+    // get the values from the inputs
+  checkIfEmpty(Favoritenumber)
+  checkIfEmpty(Favoritephrase)
+  }
+
+
+  form.addEventListener('login',(e) => {
+    e.preventDefault();
+    checkInputs();
+    
+  });
+
+  </script>
+
+</html>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Password Genrator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <linK rel="stylesheet" href="../css/style.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+          <h2>Genrat Passowrd</h2>
+      </div>
+      <form action="x.php" method="POST" class="form" id="form">
+        
+      <div class="form-control">
+        <label>Favorite number</label>
+        <input type="numberrange" minlength="3" maxlength="5" placeholder="Enter at lest 3 numpers "  id="Favoritenumber">
+        <i class="fa-check-circle"></i> 
+        <i class="fa-exclamation-circle"></i>
+        <small>Error massage </small>
+      </div>
+      <div class="form-control">
+        <label>This input will be used to genrat your password</label>
+        <input type="text" placeholder="Enter a 8 words or more phase you can't forget"  id="Favoritephrase">
+        <i class="fa-check-circle"></i> 
+        <i class="fa-exclamation-circle"></i>
+        <small>Error massage </small>
+      </div>
+        
+          
+        <button type="submit" >submit</button>
+      </form>
+    </div>
+  </body>
+
+ 
+  <script src="../js/scripts.js"></script>
+  <script>
+  const form = document.getElementById('form');
+  const Favoritenumber = document.getElementById('Favoritenumber');
+  const Favoritephrase = document.getElementById('Favoritephrase');
+
+
+  function checkInputs() {
+    // get the values from the inputs
+  checkIfEmpty(Favoritenumber)
+  checkIfEmpty(Favoritephrase)
+  }
+
+
+  form.addEventListener('submit',(e) => {
+    e.preventDefault();
+    checkInputs();
+    
+  });
+
+  </script>
+
+</html>
+
